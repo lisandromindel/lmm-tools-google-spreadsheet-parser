@@ -15,8 +15,8 @@ const parser = config => {
           reject(err);
         } else {
           const copy = {};
-          for (var key of Object.keys(data)) {
-            const tabData = data[key];
+          Object.keys(data).map(tab => {
+            const tabData = data[tab];
             let cell = {};
             tabData.map(cellData => {
               const cellValue =
@@ -27,23 +27,24 @@ const parser = config => {
                   : cellData.copy;
               const cellId = cellData.id;
               const idSplit = cellId.split(".");
+              const idSplitLength = idSplit.length;
               let currentObject = cell;
-              for (var i = 0; i < idSplit.length; i++) {
-                if (currentObject[idSplit[i]] === undefined) {
-                  if (i === idSplit.length - 1) {
-                    currentObject[idSplit[i]] =
+              idSplit.map((id, i) => {
+                if (currentObject[id] === undefined) {
+                  if (i === idSplitLength - 1) {
+                    currentObject[id] =
                       cellValue === "[]" ? [] : cellValue;
                   } else {
-                    currentObject[idSplit[i]] = {};
+                    currentObject[id] = {};
                   }
-                  currentObject = currentObject[idSplit[i]];
+                  currentObject = currentObject[id];
                 } else {
-                  currentObject = currentObject[idSplit[i]];
+                  currentObject = currentObject[id];
                 }
-              }
+              });
             });
-            copy[key.toLowerCase()] = cell;
-          }
+            copy[tab.toLowerCase()] = cell;
+          });
           resolve(copy);
         }
       }
