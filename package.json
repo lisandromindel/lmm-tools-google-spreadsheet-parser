@@ -1,6 +1,6 @@
 {
   "name": "lmm-tools-google-spreadsheet-parser",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Parses provided Google Spreadsheet into JSON",
   "main": "index.js",
   "dependencies": {
@@ -10,11 +10,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "House Agency",
+  "author": "Lisandro Mindel",
   "license": "MIT",
   "repository": {
     "type": "git",
-		"url": "git+ssh://git@bitbucket.org:thebrewery/house-google-spreadsheet-parser.git"
+		"url": "https://github.com/lisandromindel/lmm-tools-google-spreadsheet-parser"
   },
   "keywords": [
     "google", "spreadsheet", "parser"
