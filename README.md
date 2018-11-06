@@ -1,7 +1,7 @@
-# House Google Spreadsheet Parser
+# LMM Tools -  Google Spreadsheet Parser
 
 ## Instalation
-`npm i @house-agency/house-google-spreadsheet --save -E`
+`npm i lmm-tools-google-spreadsheet-parser --save -E`
 
 ## Description
 Loads and parses a Google Spreadsheet into JSON format.<br>
@@ -11,7 +11,7 @@ Requires a column named `copy` that will be mapped into the set id for that row.
 
 ## Usage
 ```
-const copyParser = require( '@house-agency/house-google-spreadsheet' );
+const copyParser = require( 'lmm-tools-google-spreadsheet-parser' );
 
 const credentials = JSON.parse( fs.readFileSync( credentials_file ) );
 const config = {
