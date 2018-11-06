@@ -45,8 +45,8 @@ copyParsed
       "title": "Director",
       "name": "Accounting",
       "colleagues": [
-        { "name": "Maria", "lastnamename": "Kent" },
-        { "name": "Martin", "lastnamename": "Gibson" }
+        { "name": "Maria", "lastname": "Kent" },
+        { "name": "Martin", "lastname": "Gibson" }
       ]
     }
   }
