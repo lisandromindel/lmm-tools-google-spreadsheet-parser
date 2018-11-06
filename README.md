@@ -1,5 +1,7 @@
 # LMM Tools - Google Spreadsheet Parser
 
+Uses [spreadsheet-to-json](https://www.npmjs.com/package/spreadsheet-to-json) as base for parsing.
+
 ## Instalation
 `npm i lmm-tools-google-spreadsheet-parser --save -E`
 
@@ -8,6 +10,9 @@ Loads and parses a Google Spreadsheet into JSON format.<br>
 Requires a column named `status` with either a checkbox or plain text setting `TRUE` or `FALSE`.<br>
 Requires a column named `id` that uses names with dot notation to create objects in the output.<br>
 Requires a column named `copy` that will be mapped into the set id for that row.
+
+## Authentification
+See authentification section on base package listed above.
 
 ## Usage
 ```
@@ -24,4 +29,6 @@ copyParsed
 	.then(result => console.log(result))
 	.catch(err => console.log('The package encountered an error.'));
 ```
-Sample Google Spreadsheet [Sample](https://docs.google.com/spreadsheets/d/1s56Tbm71_lTTQ64Ioq8yErOaKGfjvNqn4hix22-CpsI/edit?usp=sharing)
+
+## Sample Spreadsheet
+[Sample](https://docs.google.com/spreadsheets/d/1s56Tbm71_lTTQ64Ioq8yErOaKGfjvNqn4hix22-CpsI/edit?usp=sharing)
