@@ -1,6 +1,6 @@
 {
   "name": "lmm-tools-google-spreadsheet-parser",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Parses provided Google Spreadsheet into JSON",
   "main": "index.js",
   "dependencies": {
